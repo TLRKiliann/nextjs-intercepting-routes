@@ -20,7 +20,7 @@ All explanations are included in the main `page.tsx` file.
 
 `$ pnpm add next-themes`
 
-`$ pnpm add tailwind-animate`
+`$ pnpm add -D tailwindcss-animate`
 
 `$ pnpm add sharp`
 
