@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .img-styles {
+    @apply flex bg-slate-500 rounded-lg shadow-blackbg;
+  }
+  .img-styles-byid {
+    @apply flex bg-slate-500 shadow-blackbg;
+  }
+  .text-gradients {
+    @apply bg-gradient-to-r from-purple-500 from-10% to-yellow-500 to-90%;
+  }
+  .text-gradients-dark {
+    @apply bg-gradient-to-r from-cyan-500 from-10% via-emerald-500 via-50% to-yellow-500 to-90%;
+  }
+  .bg-page {
+    @apply bg-gradient-to-tr from-slate-50 from-10% to-slate-100 to-90%;
+  }
+  .bg-page-dark {
+    @apply bg-gradient-to-tr from-slate-800 from-10% to-slate-900 to-90%;
+  }
+  .bg-gradients {
+    @apply bg-gradient-to-br from-slate-50 from-10% to-slate-100 to-90%;
+  }
+  .bg-gradients-dark {
+    @apply bg-gradient-to-tr from-slate-800 from-10% to-slate-900 to-90%;
+  }
+  .text-purplecolor {
+    @apply text-purple-500 hover:text-purple-600 active:text-purple-400;
+  }
+  .text-bluecolor {
+    @apply text-cyan-500 hover:text-cyan-400 active:text-cyan-600;
+  }
+  .title-gradients {
+    @apply bg-gradient-to-r from-cyan-500 from-10% to-yellow-500 to-90%;
+  }
+  .header-links {
+    @apply text-purple-500 hover:text-purple-600 active:text-purple-400 
+      dark:text-cyan-400 dark:hover:text-cyan-300 dark:active:text-cyan-500 transition ease-in-out 
+      duration-100 hover:scale-105;
+  }
+  .darkmode-icon-color {
+    @apply text-purple-300 dark:text-cyan-700 dark:hover:text-cyan-500 hover:text-purple-400
+    active:text-purple-500 dark:active:text-cyan-600 bg-slate-200/30 hover:bg-slate-200 
+    dark:bg-slate-800 dark:hover:bg-slate-700/70;
+  }
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
